@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n,a,b;
+	cout<<"enter num1:";
+	cin>>a;
+	cout<<"enter num2:";
+	cin>>b;
+	cout<<"1.addition\t2.subtraction\t3.multiplication\t4.division"<<endl;
+	cin>>n;
+	switch(n)
+	{
+		case 1:
+			if(n==1)
+			cout<<a+b<<" ";
+			break;
+	    case 2:
+	    	if(n==2)
+	    	cout<<a-b<<" ";
+	    	break;
+	   case 3:
+	   	    if(n==3)
+	   	    cout<<a*b<<" ";
+	   	    break;
+	   case 4:
+	   	    if(n==4)
+	   	    cout<<a/b<<" ";
+	   	    break;
+	}
+	return 0;
+}

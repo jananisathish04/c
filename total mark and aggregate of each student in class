@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+
+class Marks {
+  public:
+    int roll;
+    std::string name;
+    int marks;
+
+    Marks() {
+        static int counter = 1;
+        roll = counter++;
+    }
+};
+
+class Physics : public Marks {};
+class Chemistry : public Marks {};
+class Mathematics : public Marks {};
+
+int main() {
+    int numOfStudents;
+    std::cout << "Enter the number of students: ";
+    std::cin >> numOfStudents;
+
+    Physics *physicsMarks = new Physics[numOfStudents];
+    Chemistry *chemistryMarks = new Chemistry[numOfStudents];
+    Mathematics *mathsMarks = new Mathematics[numOfStudents];
+
+    for (int i = 0; i < numOfStudents; i++) {
+        std::cout << "Enter the name of student " << i + 1 << ": ";
+        std::cin >> physicsMarks[i].name;
+
+        std::cout << "Enter marks for Physics: ";
+        std::cin >> physicsMarks[i].marks;
+
+        std::cout << "Enter marks for Chemistry: ";
+        std::cin >> chemistryMarks[i].marks;
+
+        std::cout << "Enter marks for Mathematics: ";
+        std::cin >> mathsMarks[i].marks;
+        std::cout << std::endl;
+    }
+
+    std::cout << "Roll No.\tName\tPhysics\tChemistry\tMathematics\tTotal\tAverage\n";
+    for (int i = 0; i < numOfStudents; i++) {
+        int total = physicsMarks[i].marks + chemistryMarks[i].marks + mathsMarks[i].marks;
+        float avg = total / 3.0;
+        std::cout << physicsMarks[i].roll << "\t\t" << physicsMarks[i].name << "\t" << physicsMarks[i].marks << "\t\t" << chemistryMarks[i].marks << "\t\t" << mathsMarks[i].marks << "\t\t" << total << "\t" << avg << std::endl;
+    }
+
+    delete[] physicsMarks;
+    delete[] chemistryMarks;
+    delete[] mathsMarks;
+
+    return 0;
+}

@@ -1,0 +1,52 @@
+#include <iostream>
+
+class Shape {
+public:
+  void display() {
+    std::cout << "This is a shape" << std::endl;
+  }
+};
+
+class Polygon: public Shape {
+public:
+  void display() {
+    std::cout << "Polygon is a shape" << std::endl;
+  }
+};
+
+class Rectangle: public Polygon {
+public:
+  void display() {
+    std::cout << "Rectangle is a polygon" << std::endl;
+  }
+};
+
+class Triangle: public Polygon {
+public:
+  void display() {
+    std::cout << "Triangle is a polygon" << std::endl;
+  }
+};
+
+class Square: public Rectangle {
+public:
+  void display() {
+    std::cout << "Square is a rectangle" << std::endl;
+  }
+};
+
+int main() {
+  Shape shape;
+  Polygon polygon;
+  Rectangle rectangle;
+  Triangle triangle;
+  Square square;
+
+  shape.display();
+  polygon.display();
+  rectangle.display();
+  triangle.display();
+  square.display();
+
+  return 0;
+}

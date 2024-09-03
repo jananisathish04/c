@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num_students, num_staff, num_non_teaching_staff;
+    cout << "Enter the number of student users: ";
+    cin >> num_students;
+    cout << "Enter the number of staff users: ";
+    cin >> num_staff;
+
+    num_non_teaching_staff = num_staff / 3;
+    int total_users = num_students + num_staff + num_non_teaching_staff;
+
+    cout << "Total number of users: " << total_users << endl;
+    cout << "Number of student users: " << num_students << endl;
+    cout << "Number of staff users: " << num_staff << endl;
+    cout << "Number of non-teaching staff users: " << num_non_teaching_staff << endl;
+
+    return 0;
+}

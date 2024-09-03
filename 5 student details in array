@@ -1,0 +1,50 @@
+#include<iostream>
+using namespace std;
+class sample
+{
+		char stu_a[10],stu_b[10];
+		int stu_r,stu_m1,stu_m2;
+		void info();
+		
+		public:
+		void getinfo();
+		void showdetails();
+};
+void sample::getinfo()
+{
+	cout<<"enter reg no:";
+	cin>>stu_r;
+	cout<<"enter student name:";
+	cin>>stu_a;
+	cout<<"enter department:";
+	cin>>stu_b;
+	cout<<"enter sub 1 mark:";
+	cin>>stu_m1;
+	cout<<"enter sub 2 mark:";
+	cin>>stu_m2;
+	
+}
+void sample::showdetails()
+{
+	cout<<"\n\n*****DETAILS OF STUDENT*****\n\n";
+	cout<<"\n REG NO:"<<stu_r;
+	cout<<"\n STUDENT NAME:"<<stu_a;
+	cout<<"\n DEPARTMENT:"<<stu_b;
+	cout<<"\n SUB 1 MARK:"<<stu_m1;
+	cout<<"\n SUB 2 MARK:"<<stu_m2;
+	cout<<"\n\n********************************\n\n";
+}
+int main()
+{
+	sample stu[5];
+	for(int i=0;i<=5;i++){
+	stu[i].getinfo();
+}
+cout<<"student details:"<<endl;
+    for(int i=0;i<=5;i++){
+	stu[i].showdetails();
+}
+	return 0;
+	
+}
+

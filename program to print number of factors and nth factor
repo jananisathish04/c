@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n, nth;
+    cout << "Enter a number: ";
+    cin >> n;
+    cout << "Enter the nth factor to find: ";
+    cin >> nth;
+
+    vector<int> factors;
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            factors.push_back(i);
+        }
+    }
+
+    cout << "Number of factors: " << factors.size() << endl;
+
+    if (nth <= factors.size()) {
+        cout << "The " << nth << " factor is: " << factors[nth-1] << endl;
+    } else {
+        cout << "Invalid input: nth factor does not exist" << endl;
+    }
+    return 0;
+}

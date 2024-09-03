@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+  int m, n, k;
+  cout<<"enter m:";
+  cin >> m;
+  cout<<"enter n:";
+  cin >> n;
+  cout<<"enter k:";
+  cin >> k;
+  for (int i = m; i <= n; i += k)
+    cout << i << " ";
+
+  return 0;
+}

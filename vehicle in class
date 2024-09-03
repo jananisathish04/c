@@ -1,0 +1,130 @@
+#include <iostream>
+#include <string>
+
+class Vehicle {
+  public:
+    int mileage;
+    int price;
+};
+
+class Car : public Vehicle {
+  public:
+    int ownership_cost;
+    int warranty;
+    int seating_capacity;
+    std::string fuel_type;
+};
+
+class Bike : public Vehicle {
+  public:
+    int number_of_cylinders;
+    int number_of_gears;
+    std::string cooling_type;
+    std::string wheel_type;
+    int fuel_tank_size;
+};
+
+class Audi : public Car {
+  public:
+    std::string model_type;
+};
+
+class Ford : public Car {
+  public:
+    std::string model_type;
+};
+
+class Bajaj : public Bike {
+  public:
+    std::string model_type;
+};
+
+class TVS : public Bike {
+  public:
+    std::string model_type;
+};
+
+int main() {
+  Audi audi;
+  audi.model_type = "RS5";
+  audi.ownership_cost = 100000;
+  audi.warranty = 5;
+  audi.seating_capacity = 4;
+  audi.fuel_type = "Petrol";
+  audi.mileage = 15;
+  audi.price = 500000;
+
+  std::cout << "Audi Information:\n";
+  std::cout << "Model Type: " << audi.model_type << '\n';
+  std::cout << "Ownership Cost: " << audi.ownership_cost << '\n';
+  std::cout << "Warranty: " << audi.warranty << " years\n";
+  std::cout << "Seating Capacity: " << audi.seating_capacity << '\n';
+  std::cout << "Fuel Type: " << audi.fuel_type << '\n';
+  std::cout << "Mileage: " << audi.mileage << '\n';
+  std::cout << "Price: " << audi.price << '\n';
+
+  Ford ford;
+  ford.model_type = "Mustang";
+  ford.ownership_cost = 80000;
+  ford.warranty = 3;
+  ford.seating_capacity = 4;
+  ford.fuel_type = "Petrol";
+  ford.mileage = 12;
+  ford.price = 400000;
+
+  std::cout << "\nFord Information:\n";
+  std::cout << "Model Type: " << ford.model_type << '\n';
+  std::cout << "Ownership Cost: " << ford.ownership_cost << '\n';
+  std::cout << "Warranty: " << ford.warranty << " years\n";
+  std::cout << "Seating Capacity: " << ford.seating_capacity << '\n';
+  std::cout << "Fuel Type: " << ford.fuel_type << '\n';
+  std::cout << "Mileage: " << ford.mileage << '\n';
+  std::cout << "Price: " << ford.price<<'\n';
+  
+  Bajaj bajaj;
+  bajaj.model_type = "splender";
+  bajaj.number_of_cylinders=2;
+  bajaj.number_of_gears=2;
+  bajaj.cooling_type=" automatic ";
+  bajaj.wheel_type="HIGH RESISTANT";
+  bajaj.fuel_tank_size=2;
+  bajaj.mileage=120;
+  bajaj.price=90000;
+  
+  std::cout << "\nbajaj Information:\n";
+  std::cout << "Model Type: " << bajaj.model_type << '\n';
+  std::cout << "CYLINDER:"<<bajaj.number_of_cylinders<<'\n';
+  std::cout << "GEARS:"<<bajaj.number_of_gears<<'\n';
+  std::cout << "COOLING TYPE:"<<bajaj.cooling_type<<'\n';
+  std::cout << "WHEEL TYPE :"<<bajaj.wheel_type<<'\n';
+  std::cout << "FUEL TANK SIZE:"<<bajaj.fuel_tank_size<<'\n';
+  std::cout << "MILEAGE"<<bajaj.mileage<<'\n';
+  std::cout << "PRICE"<<bajaj.price<<'\n';
+  
+  TVS tvs;
+  tvs.model_type = "splender";
+  tvs.number_of_cylinders=2;
+  tvs.number_of_gears=2;
+  tvs.cooling_type=" automatic ";
+  tvs.wheel_type="HIGH RESISTANT";
+  tvs.fuel_tank_size=2;
+  tvs.mileage=120;
+  tvs.price=90000;
+  
+  std::cout << "\ntvs Information:\n";
+  std::cout << "Model Type: " << tvs.model_type << '\n';
+  std::cout << "CYLINDER:"<<tvs.number_of_cylinders<<'\n';
+  std::cout << "GEARS:"<<tvs.number_of_gears<<'\n';
+  std::cout << "COOLING TYPE:"<<tvs.cooling_type<<'\n';
+  std::cout << "WHEEL TYPE :"<<tvs.wheel_type<<'\n';
+  std::cout << "FUEL TANK SIZE:"<<tvs.fuel_tank_size<<'\n';
+  std::cout << "MILEAGE"<<tvs.mileage<<'\n';
+  std::cout << "PRICE"<<tvs.price<<'\n';
+  
+  
+  
+  
+  
+  
+  return 0;
+}

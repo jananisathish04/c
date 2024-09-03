@@ -1,0 +1,42 @@
+#include <iostream>
+
+class Area
+{
+public:
+  void printArea(int side)
+  {
+    std::cout << "Area of square: " << side * side << std::endl;
+  }
+
+  void printArea(int length, int breadth)
+  {
+    std::cout << "Area of rectangle: " << length * breadth << std::endl;
+  }
+};
+
+int main()
+{
+  Area a;
+  int choice, side, length, breadth;
+  std::cout << "Enter 1 for square and 2 for rectangle: ";
+  std::cin >> choice;
+  if (choice == 1)
+  {
+    std::cout << "Enter side of square: ";
+    std::cin >> side;
+    a.printArea(side);
+  }
+  else if (choice == 2)
+  {
+    std::cout << "Enter length of rectangle: ";
+    std::cin >> length;
+    std::cout << "Enter breadth of rectangle: ";
+    std::cin >> breadth;
+    a.printArea(length, breadth);
+  }
+  else
+  {
+    std::cout << "Invalid choice" << std::endl;
+  }
+  return 0;
+}

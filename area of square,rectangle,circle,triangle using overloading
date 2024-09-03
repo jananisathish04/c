@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+int area(int);
+int area(int,int);
+float area(float);
+float area(float,float);
+int main()
+{
+	int s,l,b;
+	float r,ht,bs;
+	cout<<"enter the side of the square:";
+	cin>>s;
+	cout<<"enter length and breath of rectangle:";
+	cin>>l>>b;
+	cout<<"enter radius of the circle:";
+	cin>>r;
+	cout<<"enter the height and base of triangle:";
+	cin>>ht>>bs;
+	cout<<"\n area of aquare:"<<area(s);
+	cout<<"\n area of rectangle:"<<area(l,b);
+	cout<<"\n area of circle:"<<area(r);
+	cout<<"\n area of triangle:"<<area(ht,bs);
+	
+}
+int area(int s)
+{
+	return(s*s);
+}
+int area(int l,int b)
+{
+	return(l*b);
+}
+float area(float r)
+{
+	return(3.14*r*r);
+}
+float area(float ht,float bs)
+{
+	return(ht*bs);
+}
